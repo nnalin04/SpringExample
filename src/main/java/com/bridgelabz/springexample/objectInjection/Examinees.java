@@ -2,14 +2,14 @@ package com.bridgelabz.springexample.objectInjection;
 
 public class Examinees {
 
-    private MathCheat mathCheat;
+    private Cheat cheat;
 
-    public void setMathCheat(MathCheat mathCheat) {
-        this.mathCheat = mathCheat;
+    public void setCheat(Cheat cheat) {
+        this.cheat = cheat;
     }
 
     public void cheating() {
-        this.mathCheat.mathCheat();
+        this.cheat.cheat();
     }
 
 }

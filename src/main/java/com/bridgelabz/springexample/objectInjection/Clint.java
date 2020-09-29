@@ -10,5 +10,9 @@ public class Clint {
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
         Examinees examinees = context.getBean("exainee", Examinees.class);
         examinees.cheating();
+
+        ApplicationContext cont = new ClassPathXmlApplicationContext("beans.xml");
+        Examinees examinees1 = cont.getBean("exainee1", Examinees.class);
+        examinees1.cheating();
     }
 }
