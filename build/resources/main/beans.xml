@@ -1,17 +1,19 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 
-<beans xmlns = "http://www.springframework.org/schema/beans"
-       xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation = "http://www.springframework.org/schema/beans
-   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!-- A simple bean definition -->
+    <context:annotation-config />
+
     <bean id = "sim" class = "com.bridgelabz.springexample.ioc.Airtel">
-        <!-- collaborators and configuration for this bean go here -->
     </bean>
 
     <bean id = "student" class = "com.bridgelabz.springexample.setterMethod.Student">
-        <!-- collaborators and configuration for this bean go here -->
         <property name="studentName" value="Nishit Nalin" />
         <property name="id" value="1" />
     </bean>
@@ -41,5 +43,17 @@
     <bean id="exainee1" class="com.bridgelabz.springexample.objectInjection.Examinees">
         <property name="cheat" ref="scienceCheatObject" />
     </bean>
+
+    <bean id="HumanHeart" class="com.bridgelabz.springexample.autowired.Heart" >
+        <property name="noOfHeart" value="1"/>
+        <property name="typeOfAnimal" value="Human"/>
+    </bean>
+
+    <bean id="OctopusHeart" class="com.bridgelabz.springexample.autowired.Heart" >
+        <property name="typeOfAnimal" value="Octopus"/>
+        <property name="noOfHeart" value="3"/>
+    </bean>
+
+    <bean id="human" class="com.bridgelabz.springexample.autowired.Human" />
 
     </beans>
