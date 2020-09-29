@@ -1,21 +1,22 @@
 package com.bridgelabz.springexample.annotationexample;
 
-//import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
-//@Component("collegeBean")
+@Component("collegeBean")
 public class College {
 
+    /*@Value("${college.name}")
+    private String collegeName;*/
+
+    @Autowired
     private Principal principal;
 
+    @Autowired
+    @Qualifier("scienceTeacher")
     private Teacher teacher;
-
-    public void setTeacher(Teacher teacher) {
-        this.teacher = teacher;
-    }
-
-    public void setPrincipal(Principal principal) {
-        this.principal = principal;
-    }
 
     public void testMethod() {
         principal.principalInfo();
