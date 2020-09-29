@@ -1,4 +1,4 @@
-package com.bridgelabz.springexample.getterandsetter;
+package com.bridgelabz.springexample.setterMethod;
 
 public class Student {
 
