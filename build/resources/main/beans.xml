@@ -10,4 +10,16 @@
         <!-- collaborators and configuration for this bean go here -->
     </bean>
 
-</beans>
+    <bean id = "student" class = "com.bridgelabz.springexample.getterandsetter.Student">
+        <!-- collaborators and configuration for this bean go here -->
+        <property name="studentName" value="Nishit Nalin" />
+        <property name="id" value="1" />
+    </bean>
+
+    <bean id = "stu" class = "com.bridgelabz.springexample.getterandsetter.Student">
+        <!-- collaborators and configuration for this bean go here -->
+        <property name="studentName" value="Nishit Srivastava" />
+        <property name="id" value="2" />
+    </bean>
+
+    </beans>
