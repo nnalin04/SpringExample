@@ -9,6 +9,7 @@
         https://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:annotation-config />
+    <context:property-placeholder location="classpath:trainee-info.properties"/>
 
     <bean id = "sim" class = "com.bridgelabz.springexample.ioc.Airtel">
     </bean>
@@ -56,4 +57,9 @@
 
     <bean id="human" class="com.bridgelabz.springexample.autowired.Human" />
 
+    <bean id="trainee" class="com.bridgelabz.springexample.loadingformpropertiesfile.Trainee">
+        <property name="name" value="${trainee.name}"/>
+        <property name="interestedCourse" value="${trainee.interestedCourse}"/>
+        <property name="hobby" value="${trainee.hobby}"/>
+    </bean>
     </beans>
