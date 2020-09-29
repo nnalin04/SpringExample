@@ -30,4 +30,10 @@
         <constructor-arg name="id" value="1234" />
     </bean>
 
+    <bean id="exainee" class="com.bridgelabz.springexample.objectInjection.Examinees">
+        <property name="mathCheat">
+            <bean class="com.bridgelabz.springexample.objectInjection.MathCheat" />
+        </property>
+    </bean>
+
     </beans>
